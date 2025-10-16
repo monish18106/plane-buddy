@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>McDonnell Douglas F-4 Phantom II — Details</title>
+  <style>
+    :root {
+  --bg: #f8fafc;
+  --card: #ffffff5a;
+  --muted: #475569;
+  --accent: #0ea5a4;
+  --container: 1100px;
+  --radius: 12px;
+  --gap: 1.25rem;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: url('static/f4/bg mcdonnell.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #0f172a;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.site-header {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+}
+
+.main-nav a {
+  margin-left: 1rem;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.main-nav a:hover {
+  color: var(--accent);
+}
+
+/* Hero */
+.hero {
+  padding: 4rem 0;
+  color: #1e293b;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 450px;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.cta {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Sections */
+.section {
+  padding: 3rem 3;
+  background: rgba(255, 255, 255, 0.551);
+  margin-top: 2rem;
+  border-radius: 12px;
+}
+
+h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+/* Specs */
+.spec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.spec-card {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.spec-table th, .spec-table td {
+  border-top: 1px solid #e2e8f077;
+  padding: 0.8rem;
+}
+
+.spec-table th {
+  width: 35%;
+  background: #f9fafb4a;
+  text-align: left;
+  font-weight: 600;
+}
+
+/* Features */
+.features-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-item {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+.site-footer {
+  background: rgba(255,255,255,0.9);
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .main-nav {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="static/f4/logo mcdonnell.jpg" alt="F-4 Phantom II Logo" class="logo" />
+        <h1>McDonnell Douglas F-4 Phantom II</h1>
+      </div>
+      <nav class="main-nav">
+        <a href="#overview">Overview</a>
+        <a href="#specs">Specifications</a>
+        <a href="#features">Features</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#more">More</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="overview">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h2>The Legendary Supersonic Fighter of the Cold War Era</h2>
+          <p class="lead">
+            The McDonnell Douglas F-4 Phantom II is a tandem two-seat, twin-engine, all-weather, long-range supersonic jet interceptor and fighter-bomber originally developed for the United States Navy.
+            First taking flight in 1958, the Phantom II became one of the most iconic and versatile fighters in aviation history, serving with distinction in the U.S. Air Force, Navy, and Marine Corps as well as numerous allied nations.
+            Its speed, power, and adaptability cemented its place as a Cold War legend.
+          </p>
+          <a class="cta" href="#specs">View Specifications</a>
+        </div>
+        <div class="hero-image">
+          <img src="static/f4/hero mcdonnel.jpg" alt="McDonnell Douglas F-4 Phantom II Aircraft">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPECIFICATIONS ===== -->
+    <section class="section container" id="specs">
+      <h3>Key Specifications</h3>
+      <div class="spec-grid">
+        <div class="spec-card">
+          <h4>First Flight</h4>
+          <p>May 27, 1958</p>
+        </div>
+        <div class="spec-card">
+          <h4>Length</h4>
+          <p>19.2 m (63 ft)</p>
+        </div>
+        <div class="spec-card">
+          <h4>Wingspan</h4>
+          <p>11.7 m (38 ft 5 in)</p>
+        </div>
+        <div class="spec-card">
+          <h4>Seating Capacity</h4>
+          <p>2 (Pilot and Weapons Officer)</p>
+        </div>
+      </div>
+
+      <h4 class="table-title">Detailed Specifications</h4>
+      <table class="spec-table">
+        <tbody>
+          <tr><th>Manufacturer</th><td>McDonnell Douglas (later Boeing)</td></tr>
+          <tr><th>Introduced</th><td>1960</td></tr>
+          <tr><th>Engines</th><td>2 × General Electric J79-GE-17A turbojets (17,900 lbf thrust each with afterburner)</td></tr>
+          <tr><th>Maximum Speed</th><td>Mach 2.23 (2,370 km/h, 1,470 mph)</td></tr>
+          <tr><th>Range</th><td>2,600 km (1,615 mi)</td></tr>
+          <tr><th>Service Ceiling</th><td>18,300 m (60,000 ft)</td></tr>
+          <tr><th>Armament</th><td>Missiles, bombs, and 1× M61 Vulcan 20 mm cannon (in later variants)</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="section container" id="features">
+      <h3>Notable Features</h3>
+      <ul class="features-list">
+        <li>Dual-role capability as both an air superiority fighter and ground-attack aircraft.</li>
+        <li>Twin-engine design offering exceptional thrust and reliability.</li>
+        <li>Capability to reach speeds exceeding Mach 2 with advanced radar and missile systems.</li>
+        <li>Used extensively by the U.S. Air Force, Navy, and Marine Corps during Vietnam War.</li>
+        <li>Served with over a dozen allied nations across five decades of operational service.</li>
+      </ul>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section class="section container" id="gallery">
+      <h3>Gallery</h3>
+      <div class="gallery-grid">
+        <img src="static/f4/g1 mcdonnell.jpg" alt="F-4 Phantom II in flight" class="gallery-item">
+        <img src="static/f4/g2 mcdonnell.jpg" alt="F-4 Phantom cockpit view" class="gallery-item">
+        <img src="static/f4/g3 mcdonnell.jpg" alt="F-4 Phantom carrier takeoff" class="gallery-item">
+        <img src="static/f4/g4 mcdonnell.jpg" alt="F-4 Phantom formation flight" class="gallery-item">
+      </div>
+    </section>
+
+    <!-- ===== MORE INFORMATION ===== -->
+    <section class="section container" id="more">
+      <h3>Legacy and Impact</h3>
+      <p>
+        The F-4 Phantom II was a true workhorse of Western air forces for over three decades.
+        It was renowned for its speed, payload capacity, and combat versatility — equally at home intercepting enemy fighters or delivering precision strikes.
+        During the Vietnam War, it became the backbone of U.S. aerial operations and later played a critical role in Cold War air defense and reconnaissance missions.
+      </p>
+      <p>
+        The Phantom II’s adaptability allowed it to be upgraded and operated well into the 21st century by nations such as Japan, Germany, and Greece.
+        Its enduring service record and unmistakable silhouette make it one of the most celebrated jet fighters in history, symbolizing the technological leap of the jet age.
+      </p>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

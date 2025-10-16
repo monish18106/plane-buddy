@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Boeing 747 — Details</title>
+  <style>
+    :root {
+  --bg: #f8fafc;
+  --card: #ffffff5a;
+  --muted: #475569;
+  --accent: #0ea5a4;
+  --container: 1100px;
+  --radius: 12px;
+  --gap: 1.25rem;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: url('static/boe747/bgboe.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #0f172a;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.site-header {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+}
+
+.main-nav a {
+  margin-left: 1rem;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.main-nav a:hover {
+  color: var(--accent);
+}
+
+/* Hero */
+.hero {
+  padding: 4rem 0;
+  color: #1e293b;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 450px;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.cta {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Sections */
+.section {
+  padding: 3rem 3;
+  background: rgba(255, 255, 255, 0.551);
+  margin-top: 2rem;
+  border-radius: 12px;
+}
+
+h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+/* Specs */
+.spec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.spec-card {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.spec-table th, .spec-table td {
+  border-top: 1px solid #e2e8f077;
+  padding: 0.8rem;
+}
+
+.spec-table th {
+  width: 35%;
+  background: #f9fafb4a;
+  text-align: left;
+  font-weight: 600;
+}
+
+/* Features */
+.features-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-item {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+.site-footer {
+  background: rgba(255,255,255,0.9);
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .main-nav {
+    display: none;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="static/boe747/logoboe.jpg" alt="Logo" class="logo" />
+        <h1>Boeing 747</h1>
+      </div>
+      <nav class="main-nav">
+        <a href="#overview">Overview</a>
+        <a href="#specs">Specifications</a>
+        <a href="#features">Features</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#more">More</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="overview">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h2>The Queen of the Skies</h2>
+          <p class="lead">
+            The Boeing 747, affectionately known as the “Queen of the Skies,” changed the history of aviation.
+            Introduced in 1969, it became the first wide-body commercial airliner and redefined how the world traveled.
+            With its enormous capacity and long-range capability, it made intercontinental travel accessible to millions and stood as a symbol of engineering excellence for over five decades.
+          </p>
+          <a class="cta" href="#specs">View Specifications</a>
+        </div>
+        <div class="hero-image">
+          <img src="static/boe747/heroboe.jpg" alt="Boeing 747 Aircraft">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPECIFICATIONS ===== -->
+    <section class="section container" id="specs">
+      <h3>Key Specifications</h3>
+      <div class="spec-grid">
+        <div class="spec-card">
+          <h4>First Flight</h4>
+          <p>February 9, 1969</p>
+        </div>
+        <div class="spec-card">
+          <h4>Length</h4>
+          <p>70.66 m (varies by model)</p>
+        </div>
+        <div class="spec-card">
+          <h4>Wingspan</h4>
+          <p>59.64 m (varies by model)</p>
+        </div>
+        <div class="spec-card">
+          <h4>Typical Capacity</h4>
+          <p>366–524 passengers (depending on variant)</p>
+        </div>
+      </div>
+
+      <h4 class="table-title">Detailed Specifications</h4>
+      <table class="spec-table">
+        <tbody>
+          <tr><th>Manufacturer</th><td>Boeing Commercial Airplanes</td></tr>
+          <tr><th>Introduced</th><td>January 22, 1970 with Pan Am</td></tr>
+          <tr><th>Engines</th><td>4 × turbofan engines</td></tr>
+          <tr><th>Range</th><td>Up to 13,450 km (varies by model)</td></tr>
+          <tr><th>Maximum Takeoff Weight</th><td>~447,700 kg</td></tr>
+          <tr><th>Cruise Speed</th><td>907 km/h (Mach 0.85)</td></tr>
+          <tr><th>Service Ceiling</th><td>13,700 m (45,000 ft)</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="section container" id="features">
+      <h3>Notable Features</h3>
+      <ul class="features-list">
+        <li>The iconic upper deck “hump” design created additional seating and luxury lounge areas in early variants.</li>
+        <li>Four powerful turbofan engines provided reliability and excellent long-distance capability.</li>
+        <li>The 747 revolutionized mass air travel by doubling passenger capacity compared to earlier jets.</li>
+        <li>It became a favorite for cargo airlines due to its unmatched payload and versatility.</li>
+        <li>Served as the foundation for special variants like Air Force One and the Shuttle Carrier Aircraft.</li>
+      </ul>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section class="section container" id="gallery">
+      <h3>Gallery</h3>
+      <div class="gallery-grid">
+        <img src="static/boe747/g1boe.jpg" alt="Boeing 747 Front View" class="gallery-item">
+        <img src="static/boe747/g2boe.jpg" alt="Boeing 747 Cockpit" class="gallery-item">
+        <img src="static/boe747/g3boe.jpg" alt="Boeing 747 Taking Off" class="gallery-item">
+        <img src="static/boe747/g4boe.jpg" alt="Boeing 747 Night Shot" class="gallery-item">
+      </div>
+    </section>
+
+    <!-- ===== MORE INFORMATION ===== -->
+    <section class="section container" id="more">
+      <h3>Legacy and Impact</h3>
+      <p>
+        For over 50 years, the Boeing 747 has remained one of the most recognizable and influential aircraft in aviation history.
+        Its introduction enabled affordable long-distance travel, expanded tourism, and connected continents like never before.
+        Airlines loved its reliability, while passengers admired its spaciousness and comfort.
+        Though production officially ended in 2023, the 747 continues to serve in cargo, government, and private sectors.
+      </p>
+      <p>
+        Even today, aviation enthusiasts and pilots celebrate the aircraft’s elegant design and unmatched contribution to global connectivity.
+        The Boeing 747 is not just a plane — it’s a technological marvel that united the world through the skies.
+      </p>
+    </section>
+  </main>
+
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cirrus SR22 — Details</title>
+  <style>
+    :root {
+  --bg: #f8fafc;
+  --card: #ffffff5a;
+  --muted: #475569;
+  --accent: #0ea5a4;
+  --container: 1100px;
+  --radius: 12px;
+  --gap: 1.25rem;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: url('static/cirrus22/bgcir.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #0f172a;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.site-header {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+}
+
+.main-nav a {
+  margin-left: 1rem;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.main-nav a:hover {
+  color: var(--accent);
+}
+
+/* Hero */
+.hero {
+  padding: 4rem 0;
+  color: #1e293b;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 450px;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.cta {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Sections */
+.section {
+  padding: 3rem 3;
+  background: rgba(255, 255, 255, 0.551);
+  margin-top: 2rem;
+  border-radius: 12px;
+}
+
+h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+/* Specs */
+.spec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.spec-card {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.spec-table th, .spec-table td {
+  border-top: 1px solid #e2e8f077;
+  padding: 0.8rem;
+}
+
+.spec-table th {
+  width: 35%;
+  background: #f9fafb4a;
+  text-align: left;
+  font-weight: 600;
+}
+
+/* Features */
+.features-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-item {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+.site-footer {
+  background: rgba(255,255,255,0.9);
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .main-nav {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="static/cirrus22/logocir.jpg" alt="Cirrus SR22 Logo" class="logo" />
+        <h1>Cirrus SR22</h1>
+      </div>
+      <nav class="main-nav">
+        <a href="#overview">Overview</a>
+        <a href="#specs">Specifications</a>
+        <a href="#features">Features</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#more">More</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="overview">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h2>The World's Best-Selling Piston Aircraft</h2>
+          <p class="lead">
+            The Cirrus SR22 is a single-engine, four- or five-seat composite aircraft that has become one of the most successful general aviation planes ever built.
+            Introduced in 2001, it offers an unmatched combination of performance, technology, and safety.
+            With its advanced avionics and the signature Cirrus Airframe Parachute System (CAPS), the SR22 redefined what private aviation could be.
+          </p>
+          <a class="cta" href="#specs">View Specifications</a>
+        </div>
+        <div class="hero-image">
+          <img src="static/cirrus22/herocir.jpg" alt="Cirrus SR22 Aircraft">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPECIFICATIONS ===== -->
+    <section class="section container" id="specs">
+      <h3>Key Specifications</h3>
+      <div class="spec-grid">
+        <div class="spec-card">
+          <h4>First Flight</h4>
+          <p>February 2001</p>
+        </div>
+        <div class="spec-card">
+          <h4>Length</h4>
+          <p>7.92 m (26 ft)</p>
+        </div>
+        <div class="spec-card">
+          <h4>Wingspan</h4>
+          <p>11.68 m (38 ft 4 in)</p>
+        </div>
+        <div class="spec-card">
+          <h4>Seating Capacity</h4>
+          <p>4–5 passengers</p>
+        </div>
+      </div>
+
+      <h4 class="table-title">Detailed Specifications</h4>
+      <table class="spec-table">
+        <tbody>
+          <tr><th>Manufacturer</th><td>Cirrus Aircraft</td></tr>
+          <tr><th>Introduced</th><td>2001</td></tr>
+          <tr><th>Engine</th><td>Continental IO-550-N (310 hp)</td></tr>
+          <tr><th>Range</th><td>~1,850 km (1,150 mi)</td></tr>
+          <tr><th>Maximum Takeoff Weight</th><td>1,634 kg (3,600 lb)</td></tr>
+          <tr><th>Cruise Speed</th><td>~343 km/h (185 knots)</td></tr>
+          <tr><th>Service Ceiling</th><td>5,334 m (17,500 ft)</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="section container" id="features">
+      <h3>Notable Features</h3>
+      <ul class="features-list">
+        <li>Equipped with the Cirrus Airframe Parachute System (CAPS) — a whole-aircraft recovery parachute.</li>
+        <li>Composite construction for lightweight strength and aerodynamic efficiency.</li>
+        <li>Advanced Garmin Perspective+ avionics suite with large glass cockpit displays.</li>
+        <li>Luxurious, car-like cabin with air conditioning, USB ports, and premium finishes.</li>
+        <li>Modern safety innovations, including flight envelope protection and autothrottle (in G6 models).</li>
+      </ul>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section class="section container" id="gallery">
+      <h3>Gallery</h3>
+      <div class="gallery-grid">
+        <img src="static/cirrus22/g1cir.jpg" alt="Cirrus SR22 Exterior" class="gallery-item">
+        <img src="static/cirrus22/g2cir.jpg" alt="Cirrus SR22 Cockpit" class="gallery-item">
+        <img src="static/cirrus22/g3cir.jpg" alt="Cirrus SR22 Landing" class="gallery-item">
+        <img src="static/cirrus22/g4cir.jpg" alt="Cirrus SR22 Flying Over Landscape" class="gallery-item">
+      </div>
+    </section>
+
+    <!-- ===== MORE INFORMATION ===== -->
+    <section class="section container" id="more">
+      <h3>Legacy and Impact</h3>
+      <p>
+        The Cirrus SR22 revolutionized the light aircraft industry by combining luxury, safety, and innovation.
+        It remains the best-selling general aviation aircraft of the 21st century and continues to evolve with cutting-edge technology and avionics improvements.
+      </p>
+      <p>
+        Known for its balance between performance and safety, the SR22 is trusted by private pilots, flight schools, and business owners worldwide.
+        It symbolizes modern general aviation — practical, safe, and beautiful to fly.
+      </p>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

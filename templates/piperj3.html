@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Piper J-3 Cub — Details</title>
+  <style>
+    :root {
+  --bg: #f8fafc;
+  --card: #ffffff5a;
+  --muted: #475569;
+  --accent: #0ea5a4;
+  --container: 1100px;
+  --radius: 12px;
+  --gap: 1.25rem;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: url('static/pipj3/bgpip.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #0f172a;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.site-header {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+}
+
+.main-nav a {
+  margin-left: 1rem;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.main-nav a:hover {
+  color: var(--accent);
+}
+
+/* Hero */
+.hero {
+  padding: 4rem 0;
+  color: #1e293b;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 450px;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.cta {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Sections */
+.section {
+  padding: 3rem 3;
+  background: rgba(255, 255, 255, 0.551);
+  margin-top: 2rem;
+  border-radius: 12px;
+}
+
+h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+/* Specs */
+.spec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.spec-card {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.spec-table th, .spec-table td {
+  border-top: 1px solid #e2e8f077;
+  padding: 0.8rem;
+}
+
+.spec-table th {
+  width: 35%;
+  background: #f9fafb4a;
+  text-align: left;
+  font-weight: 600;
+}
+
+/* Features */
+.features-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-item {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+.site-footer {
+  background: rgba(255,255,255,0.9);
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .main-nav {
+    display: none;
+  }
+}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="static/pipj3/logopip.png" alt="Piper J-3 Cub Logo" class="logo" />
+        <h1>Piper J-3 Cub</h1>
+      </div>
+      <nav class="main-nav">
+        <a href="#overview">Overview</a>
+        <a href="#specs">Specifications</a>
+        <a href="#features">Features</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#more">More</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="overview">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h2>The Little Yellow Plane That Taught the World to Fly</h2>
+          <p class="lead">
+            The Piper J-3 Cub is an American light aircraft that became one of the most recognizable and beloved airplanes of all time.
+            Simple, affordable, and reliable, it served as a trainer for thousands of pilots during World War II and remains a favorite among aviation enthusiasts today.
+            Its bright yellow color and friendly handling earned it a timeless place in aviation history.
+          </p>
+          <a class="cta" href="#specs">View Specifications</a>
+        </div>
+        <div class="hero-image">
+          <img src="static/pipj3/heropip.jpg" alt="Piper J-3 Cub Aircraft">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPECIFICATIONS ===== -->
+    <section class="section container" id="specs">
+      <h3>Key Specifications</h3>
+      <div class="spec-grid">
+        <div class="spec-card">
+          <h4>First Flight</h4>
+          <p>1938</p>
+        </div>
+        <div class="spec-card">
+          <h4>Length</h4>
+          <p>6.83 m (22 ft 5 in)</p>
+        </div>
+        <div class="spec-card">
+          <h4>Wingspan</h4>
+          <p>10.74 m (35 ft 3 in)</p>
+        </div>
+        <div class="spec-card">
+          <h4>Seating Capacity</h4>
+          <p>2 (Pilot and Passenger)</p>
+        </div>
+      </div>
+
+      <h4 class="table-title">Detailed Specifications</h4>
+      <table class="spec-table">
+        <tbody>
+          <tr><th>Manufacturer</th><td>Piper Aircraft</td></tr>
+          <tr><th>Introduced</th><td>1938</td></tr>
+          <tr><th>Engine</th><td>1 × Continental A-65-8 piston engine (65 hp)</td></tr>
+          <tr><th>Range</th><td>~354 km (220 mi)</td></tr>
+          <tr><th>Maximum Takeoff Weight</th><td>553 kg (1,220 lb)</td></tr>
+          <tr><th>Cruise Speed</th><td>~121 km/h (75 mph)</td></tr>
+          <tr><th>Service Ceiling</th><td>3,660 m (12,000 ft)</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="section container" id="features">
+      <h3>Notable Features</h3>
+      <ul class="features-list">
+        <li>Lightweight and simple design, ideal for training new pilots.</li>
+        <li>High-wing configuration offering excellent visibility and stability.</li>
+        <li>Fabric-covered steel tube fuselage for easy maintenance and repair.</li>
+        <li>Low operating cost and minimal instrumentation for basic flight training.</li>
+        <li>Iconic bright yellow paint scheme with black lightning bolt stripe.</li>
+      </ul>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section class="section container" id="gallery">
+      <h3>Gallery</h3>
+      <div class="gallery-grid">
+        <img src="static/pipj3/g1pip.jpg" alt="Piper J-3 Cub in Flight" class="gallery-item">
+        <img src="static/pipj3/g2pip.jpg" alt="Piper J-3 Cub Cockpit" class="gallery-item">
+        <img src="static/pipj3/g3pip.jpg" alt="Piper J-3 Cub Parked on Grass" class="gallery-item">
+        <img src="static/pipj3/g4pip.jpg" alt="Historic Piper Cub Training" class="gallery-item">
+      </div>
+    </section>
+
+    <!-- ===== MORE INFORMATION ===== -->
+    <section class="section container" id="more">
+      <h3>Legacy and Impact</h3>
+      <p>
+        The Piper J-3 Cub helped introduce millions to the joy of flying.
+        It became the primary trainer for the U.S. military during World War II, where it was known as the L-4 Grasshopper.
+        Its affordability and simplicity made aviation accessible to everyday people and sparked the growth of general aviation worldwide.
+      </p>
+      <p>
+        Even today, countless Cubs continue to fly — cherished by pilots for their nostalgic charm, forgiving handling, and enduring spirit of adventure.
+        The Piper Cub remains a symbol of freedom and the golden age of grassroots aviation.
+      </p>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Plane Buddy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet"/>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      overflow-x: hidden;
+      background: #000;
+      scroll-behavior: smooth;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      height: 100vh;
+      background: url("{{ url_for('static', filename='1.jpg') }}") no-repeat center center/cover;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(2px);
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      background: linear-gradient(90deg, #ffe08a, #ffb347);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 1;
+      transform: translateY(30px);
+      opacity: 0;
+      animation: slideUp 1s ease 0.5s forwards;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 750px;
+      line-height: 1.6;
+      opacity: 0;
+      margin-bottom: 40px;
+      position: relative;
+      z-index: 1;
+      animation: fadeIn 2s ease 1s forwards;
+    }
+
+    .hero a {
+      position: relative;
+      z-index: 1;
+      display: inline-block;
+      padding: 12px 25px;
+      font-size: 1.1rem;
+      color: #000;
+      background: #ffe08a;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.4s ease;
+    }
+
+    .hero a:hover {
+      background: #ffb347;
+      transform: scale(1.1);
+      box-shadow: 0 0 20px rgba(255, 176, 80, 0.7);
+    }
+
+    /* GRID SECTION */
+    .grid-section {
+      position: relative;
+      z-index: 1;
+      background: url("{{ url_for('static', filename='2.jpg') }}") no-repeat center center/cover;
+      background-attachment: fixed;
+      padding: 100px 20px;
+      overflow: hidden;
+    }
+
+    .grid-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(3px);
+    }
+
+    .grid-section .content {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+      opacity: 0;
+      animation: fadeIn 1.5s ease 0.5s forwards;
+    }
+
+    .grid-section h2 {
+      font-size: 2.8rem;
+      margin-bottom: 50px;
+      background: linear-gradient(90deg, #ffe08a, #ffb347);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Fancy Track Button */
+    .track-btn {
+      display: inline-block;
+      padding: 14px 35px;
+      margin-bottom: 40px;
+      background: linear-gradient(90deg, #ffe08a, #ffb347);
+      border-radius: 30px;
+      font-size: 1.1rem;
+      color: #000;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-decoration: none;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .track-btn:hover {
+      transform: scale(1.07);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+      background: linear-gradient(90deg, #ffb347, #ffe08a);
+    }
+
+    /* GRID LAYOUT (2x5 fixed) */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      opacity: 0;
+      animation: fadeIn 2s ease 0.8s forwards;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 15px;
+      overflow: hidden;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+      transition: all 0.4s ease;
+      height: 400px;
+      text-decoration: none;
+      color: white;
+    }
+
+    .card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 12px 35px rgba(255, 200, 100, 0.3);
+    }
+
+    .card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.1);
+    }
+
+    .card-info {
+      padding: 20px;
+      text-align: center;
+      transition: opacity 0.4s ease;
+    }
+
+    .card-info h3 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+
+    .type-tag {
+      display: inline-block;
+      font-size: 0.9rem;
+      padding: 6px 12px;
+      border-radius: 12px;
+      background: #ffe08a;
+      color: #000;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover .type-tag {
+      background: #ffb347;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @media(max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Plane Buddy</h1>
+    <p>Welcome to Plane Buddy! Explore the world of aviation — from commercial giants to sleek experimental crafts — and experience live flight tracking in real time. Learn, discover, and feel the thrill of flying like never before!</p>
+    <a href="#planes">Explore Aircrafts ↓</a>
+  </section>
+
+  <!-- EXPLORE PLANES -->
+  <section id="planes" class="grid-section">
+    <div class="content">
+      <a href="/tracking" class="track-btn">✈️ Track Planes</a>
+      <h2>Explore Aircrafts</h2>
+
+      <div class="grid">
+        <a href="/boeing747" class="card">
+          <img src="{{ url_for('static', filename='boe747/logoboe.jpg') }}" alt="Boeing 747">
+          <div class="card-info">
+            <h3>Boeing 747</h3>
+            <div class="type-tag">Commercial</div>
+          </div>
+        </a>
+
+        <a href="/concorde" class="card">
+          <img src="{{ url_for('static', filename='conc/logocon.jpg') }}" alt="Concorde">
+          <div class="card-info">
+            <h3>Concorde</h3>
+            <div class="type-tag">Commercial</div>
+          </div>
+        </a>
+
+        <a href="/douglasdc3" class="card">
+          <img src="{{ url_for('static', filename='dc3/logodou.jpg') }}" alt="Douglas DC-3">
+          <div class="card-info">
+            <h3>Douglas DC-3</h3>
+            <div class="type-tag">Commercial</div>
+          </div>
+        </a>
+
+        <a href="/cessna182" class="card">
+          <img src="{{ url_for('static', filename='cessa182/logocess.jpg') }}" alt="Cessna 182 Skylane">
+          <div class="card-info">
+            <h3>Cessna 182 Skylane</h3>
+            <div class="type-tag">Private</div>
+          </div>
+        </a>
+
+        <a href="/cirrussr22" class="card">
+          <img src="{{ url_for('static', filename='cirrus22/logocir.jpg') }}" alt="Cirrus SR22">
+          <div class="card-info">
+            <h3>Cirrus SR22</h3>
+            <div class="type-tag">Private</div>
+          </div>
+        </a>
+
+        <a href="/antonov225" class="card">
+          <img src="{{ url_for('static', filename='an225/logoant.jpg') }}" alt="Antonov AN-225">
+          <div class="card-info">
+            <h3>Antonov AN-225</h3>
+            <div class="type-tag">Cargo</div>
+          </div>
+        </a>
+
+        <a href="/piperj3" class="card">
+          <img src="{{ url_for('static', filename='pipj3/logopip.png') }}" alt="Piper J-3 Cub">
+          <div class="card-info">
+            <h3>Piper J-3 Cub</h3>
+            <div class="type-tag">Vintage</div>
+          </div>
+        </a>
+
+        <a href="/lockheedc130" class="card">
+          <img src="{{ url_for('static', filename='c130/logo lock.jpg') }}" alt="Lockheed C-130">
+          <div class="card-info">
+            <h3>Lockheed C-130</h3>
+            <div class="type-tag">Military</div>
+          </div>
+        </a>
+
+        <a href="/f4phantom" class="card">
+          <img src="{{ url_for('static', filename='f4/logo mcdonnell.jpg') }}" alt="F-4 Phantom II">
+          <div class="card-info">
+            <h3>F-4 Phantom II</h3>
+            <div class="type-tag">Military</div>
+          </div>
+        </a>
+
+        <a href="/x15" class="card">
+          <img src="{{ url_for('static', filename='x15/bg x15.jpg') }}" alt="North American X-15">
+          <div class="card-info">
+            <h3>North American X-15</h3>
+            <div class="type-tag">Experimental</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

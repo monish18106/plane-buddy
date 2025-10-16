@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Antonov AN-225 Mriya — Details</title>
+  <style>
+    :root {
+  --bg: #f8fafc;
+  --card: #ffffff5a;
+  --muted: #475569;
+  --accent: #0ea5a4;
+  --container: 1100px;
+  --radius: 12px;
+  --gap: 1.25rem;
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: url('static/an225/bgant.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #0f172a;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.site-header {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+}
+
+.main-nav a {
+  margin-left: 1rem;
+  color: var(--muted);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.main-nav a:hover {
+  color: var(--accent);
+}
+
+/* Hero */
+.hero {
+  padding: 4rem 0;
+  color: #1e293b;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 450px;
+  gap: 2rem;
+  align-items: center;
+}
+
+.hero-text h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+
+.cta {
+  background: var(--accent);
+  color: #fff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.hero-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+/* Sections */
+.section {
+  padding: 3rem 3;
+  background: rgba(255, 255, 255, 0.551);
+  margin-top: 2rem;
+  border-radius: 12px;
+}
+
+h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+/* Specs */
+.spec-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.spec-card {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+}
+
+.spec-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.spec-table th, .spec-table td {
+  border-top: 1px solid #e2e8f077;
+  padding: 0.8rem;
+}
+
+.spec-table th {
+  width: 35%;
+  background: #f9fafb4a;
+  text-align: left;
+  font-weight: 600;
+}
+
+/* Features */
+.features-list {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.gallery-item {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+.site-footer {
+  background: rgba(255,255,255,0.9);
+  padding: 1rem;
+  text-align: center;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+  .main-nav {
+    display: none;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="static/an225/logoant.jpg" alt="Antonov Logo" class="logo" />
+        <h1>Antonov AN-225 Mriya</h1>
+      </div>
+      <nav class="main-nav">
+        <a href="#overview">Overview</a>
+        <a href="#specs">Specifications</a>
+        <a href="#features">Features</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#more">More</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="overview">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h2>The Giant of the Skies</h2>
+          <p class="lead">
+            The Antonov AN-225 Mriya, meaning “Dream” in Ukrainian, was the largest and heaviest aircraft ever built.
+            Designed in the 1980s by the Antonov Design Bureau in the Soviet Union, it was originally created to transport the Buran space shuttle and other oversized cargo.
+            With its unmatched power and size, the AN-225 became a symbol of human engineering and aeronautical innovation.
+          </p>
+          <a class="cta" href="#specs">View Specifications</a>
+        </div>
+        <div class="hero-image">
+          <img src="static/an225/heroant.jpg" alt="Antonov AN-225 Mriya Aircraft">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SPECIFICATIONS ===== -->
+    <section class="section container" id="specs">
+      <h3>Key Specifications</h3>
+      <div class="spec-grid">
+        <div class="spec-card">
+          <h4>First Flight</h4>
+          <p>December 21, 1988</p>
+        </div>
+        <div class="spec-card">
+          <h4>Length</h4>
+          <p>84 m (275 ft 7 in)</p>
+        </div>
+        <div class="spec-card">
+          <h4>Wingspan</h4>
+          <p>88.4 m (290 ft)</p>
+        </div>
+        <div class="spec-card">
+          <h4>Maximum Takeoff Weight</h4>
+          <p>640,000 kg (1.41 million lb)</p>
+        </div>
+      </div>
+
+      <h4 class="table-title">Detailed Specifications</h4>
+      <table class="spec-table">
+        <tbody>
+          <tr><th>Manufacturer</th><td>Antonov Design Bureau (Ukraine)</td></tr>
+          <tr><th>Introduced</th><td>1988 (Prototype)</td></tr>
+          <tr><th>Engines</th><td>6 × Progress D-18T turbofan engines</td></tr>
+          <tr><th>Range</th><td>Up to 15,400 km (empty) / 4,500 km (max payload)</td></tr>
+          <tr><th>Maximum Payload</th><td>250,000 kg</td></tr>
+          <tr><th>Cruise Speed</th><td>850 km/h (Mach 0.79)</td></tr>
+          <tr><th>Service Ceiling</th><td>11,000 m (36,000 ft)</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== FEATURES ===== -->
+    <section class="section container" id="features">
+      <h3>Notable Features</h3>
+      <ul class="features-list">
+        <li>The only aircraft with six turbofan engines and the largest wingspan of any operational plane in the world.</li>
+        <li>Designed to carry oversized cargo externally, such as the Buran orbiter, on its upper fuselage.</li>
+        <li>Holds multiple world records for airlifting heavy and long cargo items.</li>
+        <li>Equipped with 32 landing wheels to distribute its enormous weight safely on runways.</li>
+        <li>Served both aerospace and humanitarian missions, including the transport of relief supplies during crises.</li>
+      </ul>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section class="section container" id="gallery">
+      <h3>Gallery</h3>
+      <div class="gallery-grid">
+        <img src="static/an225/g1ant.jpg" alt="Antonov AN-225 Front View" class="gallery-item">
+        <img src="static/an225/g2ant.jpg" alt="Antonov AN-225 Cockpit" class="gallery-item">
+        <img src="static/an225/g3ant.jpg" alt="Antonov AN-225 in Flight" class="gallery-item">
+        <img src="static/an225/g4ant.jpg" alt="Antonov AN-225 Cargo Loading" class="gallery-item">
+      </div>
+    </section>
+
+    <!-- ===== MORE INFORMATION ===== -->
+    <section class="section container" id="more">
+      <h3>Legacy and Impact</h3>
+      <p>
+        The Antonov AN-225 Mriya stood as a masterpiece of aviation engineering, representing the pinnacle of heavy-lift capability.
+        Its ability to transport immense and irregular cargo made it a vital asset for international logistics and aerospace operations.
+        The aircraft inspired awe wherever it landed, drawing crowds of aviation enthusiasts worldwide.
+      </p>
+      <p>
+        Tragically, the AN-225 was destroyed in 2022 during the conflict in Ukraine.
+        However, its legacy continues to inspire new generations of engineers and dreamers.
+        Plans to rebuild or recreate the Mriya remain a symbol of resilience, innovation, and the enduring dream of reaching new heights.
+      </p>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
