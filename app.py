@@ -57,7 +57,7 @@ def flights():
     try:
         # OpenSky anonymous public API (works without credentials)
         url = "https://opensky-network.org/api/states/all?lamin=-60&lomin=-180&lamax=85&lomax=180"
-        resp = requests.get(url, timeout=10)
+        resp = requests.get(url, timeout=40)
         data = resp.json()
         flights = []
 
