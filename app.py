@@ -57,7 +57,7 @@ def flights():
     try:
         # OpenSky anonymous public API (works without credentials)
         url = "https://opensky-network.org/api/states/all?lamin=-60&lomin=-180&lamax=85&lomax=180"
-        resp = requests.get(url, timeout=15)
+        resp = requests.get(url, timeout=10)
         data = resp.json()
         flights = []
 
@@ -83,7 +83,5 @@ def flights():
         print("Error:", e)
         return jsonify({"flights": []})
 
-
 if __name__ == "__main__":
     app.run(debug=True)
-
